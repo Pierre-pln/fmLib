@@ -46,10 +46,15 @@ Resources = {
     COREInv = { name = 'core_inventory', export = 'all' },
     PSInv = { name = 'ps-inventory', export = 'all' },
     CHEZZAInv = { name = 'inventory', export = 'all' },
+    CODEMInv = { name = '', export = 'all' },
     -- MOVHUD = { name = '17mov_Hud', export = 'all' },
-
+    
+    -- Banking
+    RX_Billing = { name = 'RxBilling', export = 'all' },
+    TGGBilling = { name = 'tgg-billing', export = 'all' },
     -- Banking
     RX_BANKING = { name = 'RxBanking', export = 'all' },
+    TGGBanking = { name = 'tgg-banking', export = 'all' },
 
     -- Vehicle Keys
     QBVehKeys = { name = 'qb-vehiclekeys', export = false },
