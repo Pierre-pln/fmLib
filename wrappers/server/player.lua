@@ -181,16 +181,18 @@ function FM.player.get(id)
     end
 
     ---@return { name: string, label: string, grade: number, gradeLabel: string } | nil gang
-    p.getGang = function()
+     p.getGang = function()
         if ESX then
-            local job = p.getJob()
-            if not job then return end
-
+            local job = exports['arketype_GangBuilder']:getGang(_fwp.source)
+            Wait(30)
+            if job.gangplayer_name == 'civil' then
+                return
+            end
             return {
-                name = job.name,
-                label = job.label,
-                grade = job.grade,
-                gradeLabel = job.gradeLabel
+                name = job.gangplayer_name,
+                label = job.gangplayer_label,
+                grade = job.gangplayer_rank,
+                gradeLabel = job.gangplayer_ranklabel
             }
         elseif QB then
             return {
